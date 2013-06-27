@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>RonSwanson Soundboard</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div id="container">
+		<div class="header">
+			<h1> Ron Swanson </h1> 
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$("audio").each(function(i, audioElement) {
+					var audio = $(this);
+					var that = this; //closure to keep reference to current audio tag
+					$(".buttons").append($('<button class="btn btn-large btn-primary type="button">'+audio.attr("title")+'</button>').click(function() {
+						that.currentTime = 0;
+						that.play();
+					}));
+				});
+			});
+		</script>
+
+		<audio src="clips/April.m4a" autobuffer="true" title="April"></audio>
+		<audio src="clips/Bacon &amp; Eggs.m4a" autobuffer="true" title="Bacon &amp; Eggs"></audio>
+		<audio src="clips/Bacon Five.m4a" autobuffer="true" title="Bacon Five"></audio>
+		<audio src="clips/Bacon Four.m4a" autobuffer="true" title="Bacon Four"></audio>
+		<audio src="clips/Bacon Three.m4a" autobuffer="true" title="Bacon Three"></audio>
+		<audio src="clips/Bacon Two.m4a" autobuffer="true" title="Bacon Two"></audio>
+		<audio src="clips/Bacon.m4a" autobuffer="true" title="Bacon"></audio>
+		<audio src="clips/Best Friend.m4a" autobuffer="true" title="Best Friend"></audio>
+		<audio src="clips/Capitalism.m4a" autobuffer="true" title="Capitalism"></audio>
+		<audio src="clips/Coworkers.m4a" autobuffer="true" title="Coworkers"></audio>
+		<audio src="clips/Crying.m4a" autobuffer="true" title="Crying"></audio>
+		<audio src="clips/Fish.m4a" autobuffer="true" title="Fish"></audio>
+		<audio src="clips/Give a Man a Fish.m4a" autobuffer="true" title="Give a Man a Fish"></audio>
+		<audio src="clips/Haircuts.m4a" autobuffer="true" title="Haircuts"></audio>
+		<audio src="clips/Hostile Witness.m4a" autobuffer="true" title="Hostile Witness"></audio>
+		<audio src="clips/Laughing.m4a" autobuffer="true" title="Laughing"></audio>
+		<audio src="clips/Meat Tornado.m4a" autobuffer="true" title="Meat Tornado"></audio>
+		<audio src="clips/My Name Is.m4a" autobuffer="true" title="My Name Is"></audio>
+		<audio src="clips/Pryimid of Greatness.m4a" autobuffer="true" title="Pryimid of Greatness"></audio>
+		<audio src="clips/Shopping 1.m4a" autobuffer="true" title="Shopping"></audio>
+		<audio src="clips/Slash It.m4a" autobuffer="true" title="Slash It"></audio>
+		<audio src="clips/Sleep Fighting.m4a" autobuffer="true" title="Sleep Fighting"></audio>
+		<audio src="clips/Turtle Flu.m4a" autobuffer="true" title="Turtle Flu"></audio>
+		
+		<div class="buttons"></div>
+
+	</div>
+</body>
+</html>
